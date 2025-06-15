@@ -11,4 +11,8 @@ docker-compose up --build
 EXPOSE 7860
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
 ```
-2. Push to Hugging Face Spaces
+2. remove `joblib.dump()` in `preprocessor.py`
+```python
+joblib.dump(preprocessor, 'preprocessor.pkl')
+```
+3. Push to Hugging Face Spaces
